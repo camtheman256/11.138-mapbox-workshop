@@ -13,7 +13,7 @@ const INITIAL_VIEW_STATE = {
 };
 
 export default function DeckMap() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   return (
     <DeckGL
@@ -30,8 +30,8 @@ export default function DeckMap() {
             id="fill"
             type="fill"
             source-layer="trees_big"
-            paint={{ "fill-color": "#0f0" }}
-            layout={{visibility: visible ? 'visible' : 'none'}}
+            paint={{ "fill-color": "#0a0" }}
+            layout={{ visibility: visible ? "visible" : "none" }}
           ></Layer>
         </Source>
       </Map>
