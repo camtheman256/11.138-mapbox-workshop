@@ -1,7 +1,7 @@
 import DeckGL from "@deck.gl/react/typed";
 import { Layer, Map, Source } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiY2tsZWltYW4xNSIsImEiOiJjazhseTJvcnMwOWdvM2hvOHE2ejk0ZHhoIn0.dp27-MIUTPYjRr-VLw1Rqg";
@@ -9,11 +9,11 @@ const MAPBOX_TOKEN =
 const INITIAL_VIEW_STATE = {
   latitude: 39.953887,
   longitude: -75.2581121,
-  zoom: 13,
+  zoom: 11,
 };
 
 export default function DeckMap() {
-  const [visible, setVisible] = useState(true);
+  const [visible] = useState(true);
 
   return (
     <DeckGL
@@ -30,7 +30,7 @@ export default function DeckMap() {
             id="fill"
             type="fill"
             source-layer="trees_big"
-            paint={{ "fill-color": "#0a0" }}
+            paint={{ "fill-color": "#070" }}
             layout={{ visibility: visible ? "visible" : "none" }}
           ></Layer>
         </Source>
